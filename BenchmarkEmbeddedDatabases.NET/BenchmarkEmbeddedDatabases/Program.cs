@@ -1,14 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using BenchmarkEmbeddedDatabases.Access2016;
 using BenchmarkEmbeddedDatabases.Core.Benchmarker;
 using BenchmarkEmbeddedDatabases.Core.BenchmarkHarness;
 using BenchmarkEmbeddedDatabases.Core.Benchmarks;
-using BenchmarkEmbeddedDatabases.LocalDB;
 using BenchmarkEmbeddedDatabases.Sqlite;
 using BenchmarkEmbeddedDatabases.SqlServerCE;
-using NLog;
 
 namespace BenchmarkEmbeddedDatabases
 {
@@ -47,11 +44,6 @@ namespace BenchmarkEmbeddedDatabases
             IList<Func<string, IBenchmarkHarness>> benchmarkHarnesses = 
                 new List<Func<string, IBenchmarkHarness>>
                 {
-                    (path) => new Access2013AceBenchmarkHarness(path),
-                    (path) => new Access2013JetBenchmarkHarness(path),
-                    (path) => new LocalDb2012BenchmarkHarness(path),
-                    (path) => new LocalDb2014BenchmarkHarness(path),
-                    (path) => new LocalDb2016BenchmarkHarness(path),
                     (path) => new SqliteBenchmarkHarness(path),
                     (path) => new SqlServerCompactBenchmarkHarness(path)
                 };
@@ -95,6 +87,7 @@ namespace BenchmarkEmbeddedDatabases
                 }
             }
             Console.ForegroundColor = ConsoleColor.White;
+            Console.Read();
         }
     }
 }
