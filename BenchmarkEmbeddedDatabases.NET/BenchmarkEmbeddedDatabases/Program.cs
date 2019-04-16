@@ -6,6 +6,7 @@ using BenchmarkEmbeddedDatabases.Core.BenchmarkHarness;
 using BenchmarkEmbeddedDatabases.Core.Benchmarks;
 using BenchmarkEmbeddedDatabases.Sqlite;
 using BenchmarkEmbeddedDatabases.SqlServerCE;
+using NLog;
 
 namespace BenchmarkEmbeddedDatabases
 {
