@@ -7,7 +7,7 @@ namespace BenchmarkEmbeddedDatabases.Sqlite
 {
     public class SqliteBenchmarkHarness : BaseBenchmarkHarness
     {
-        public override string Identifier => "System.Data.Sqlite (1.0.104)";
+        public override string Identifier => "System.Data.Sqlite (1.0.110.0)";
         public override string ConnectionString => $"Data Source={Path};Version=3";
 
         public SqliteBenchmarkHarness(string path) 
